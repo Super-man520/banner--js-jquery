@@ -1,0 +1,43 @@
+.banner {
+  width: 731px;
+  height: 291px;
+  overflow: hidden;
+  position: relative;
+  margin: 200px auto 0;
+}
+.banner ul {
+  width: 800%;
+  position: absolute;
+  left: 0px;
+}
+.banner ul li {
+  width: 731px;
+  float: left;
+}
+.banner ul li a {
+  display: block;
+}
+.banner ul li img {
+  width: 100%;
+}
+.banner ol {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
+}
+.banner ol li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 4px;
+  float: left;
+  background-color: #fff;
+  cursor: pointer;
+}
+.banner ol li.current {
+  width: 56px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #f87970;
+}

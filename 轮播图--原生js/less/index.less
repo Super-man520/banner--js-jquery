@@ -1,0 +1,45 @@
+.banner {
+  width: 731px;
+  height: 291px;
+  // background: yellow;
+  overflow: hidden;
+  position: relative;
+  margin: 200px auto 0;
+  ul {
+      width: 800%;
+      position: absolute;
+      left: 0px;
+      li {
+          width: 731px;
+          float: left;
+          a {
+              display: block;
+          }
+          img {
+              width: 100%;
+          }
+      }
+  }
+  ol {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 15px;
+      li {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          margin: 0 4px;
+          float: left;
+          background-color: #fff;
+          cursor: pointer;
+      }
+      li.current {
+          width: 56px;
+          height: 12px;
+          border-radius: 6px;
+          background-color: #f87970;
+      }
+  }
+
+}
