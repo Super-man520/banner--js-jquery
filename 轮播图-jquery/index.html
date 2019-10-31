@@ -126,17 +126,17 @@
       var timer = null; //声明一个全局定时器
       var index = 0;
       //上一张
-      $(".prev").click(function () { 
+      $(".prev").click(function () {
         prev();
       })
       //下一张
-      $(".next").click(function () { 
+      $(".next").click(function () {
         next();
       });
       function next() {
         index++;
+        // 当图片到最后一张时跳回第一张，本例中在最后一张中放入了第一张的图片，为实现无缝切换图片的效果。
         if (index > $('.pic-list li').length - 2) {
-					// 当图片到最后一张时跳回第一张，本例中在最后一张中放入了第一张的图片，为实现无缝切换图片的效果。
           $(".pic-list").animate({ left: -(index) * $('.pic-list img').width() }, 1200);
           index = 0;
           // 直接回到初始位置
@@ -156,19 +156,19 @@
       }
       //设置自动播放的定时器
       function auto() {
-        timer = setInterval(function () { 
+        timer = setInterval(function () {
           next();
           roundHover(index);
         }, 3000)
       }
       auto();
       //鼠标移入 定时器取消
-      $("#container").mouseover(function () { 
+      $("#container").mouseover(function () {
         clearInterval(timer);
         $('.arrow').css("opacity", 0.7)
       })
       //鼠标离开 定时器开启
-      $("#container").mouseleave(function () { 
+      $("#container").mouseleave(function () {
         auto();
         $('.arrow').css("opacity", 0)
       })
