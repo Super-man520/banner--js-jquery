@@ -123,7 +123,8 @@
     $(function () {
       // 放第一张假图在最后面实现无缝切换
       $('.pic-list').append($('.pic-list').children().eq(0).clone(true))
-      var timer = null; //声明一个全局定时器
+      //声明一个全局定时器
+      var timer = null; 
       var index = 0;
       //上一张
       $(".prev").click(function () {
@@ -185,7 +186,6 @@
       function roundHover(index) {
         $(".round-list li").eq(index).addClass("active").siblings().removeClass("active");
       }
-
     })
   </script>
 </body>
